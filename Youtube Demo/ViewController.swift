@@ -15,6 +15,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         loadViewYoutube()
         print("Done")
+        print("ReDone")
+
         // Do any additional setup after loading the view, typically from a nib.
     }
     func loadViewYoutube()
