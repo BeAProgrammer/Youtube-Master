@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +14,78 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Youtube_Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PVI-np-vym" customClass="YouTubePlayerView" customModule="Youtube_Demo" customModuleProvider="target">
+                                <rect key="frame" x="16" y="59" width="343" height="201"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="201" id="tnt-UG-fYr"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cn3-68-0GJ">
+                                <rect key="frame" x="167" y="288" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="4hn-mW-qF5"/>
+                                    <constraint firstAttribute="width" constant="40" id="NBx-zu-ar6"/>
+                                </constraints>
+                                <state key="normal" image="play"/>
+                                <connections>
+                                    <action selector="playVdo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VwP-rN-sxH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vXC-BW-iIu">
+                                <rect key="frame" x="92.5" y="288" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="Zb3-1w-Dso"/>
+                                    <constraint firstAttribute="height" constant="40" id="gqO-Wr-ZKj"/>
+                                </constraints>
+                                <state key="normal" image="back"/>
+                                <connections>
+                                    <action selector="preVdo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aNi-RS-2Fk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YZE-ac-D6I">
+                                <rect key="frame" x="242.5" y="288" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="1ec-jL-EM8"/>
+                                    <constraint firstAttribute="height" constant="40" id="Tg7-hx-58C"/>
+                                </constraints>
+                                <state key="normal" image="next"/>
+                                <connections>
+                                    <action selector="nextVdo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zvL-a2-g3H"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="YZE-ac-D6I" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" multiplier="1.4" id="4Vw-dJ-FaG"/>
+                            <constraint firstItem="PVI-np-vym" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="9K4-ed-9c9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PVI-np-vym" secondAttribute="trailing" constant="16" id="Bld-R7-Fes"/>
+                            <constraint firstItem="PVI-np-vym" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="39" id="NoQ-P1-fQ2"/>
+                            <constraint firstItem="vXC-BW-iIu" firstAttribute="top" secondItem="PVI-np-vym" secondAttribute="bottom" constant="28" id="WbP-Sg-1y1"/>
+                            <constraint firstItem="YZE-ac-D6I" firstAttribute="top" secondItem="PVI-np-vym" secondAttribute="bottom" constant="28" id="dIV-H1-lN0"/>
+                            <constraint firstItem="cn3-68-0GJ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="eLD-P7-wLb"/>
+                            <constraint firstItem="cn3-68-0GJ" firstAttribute="top" secondItem="PVI-np-vym" secondAttribute="bottom" constant="28" id="q2K-DV-L7a"/>
+                            <constraint firstItem="vXC-BW-iIu" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" multiplier="0.6" id="yl5-6e-Dil"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="youtubeView" destination="PVI-np-vym" id="6DG-Yd-jxY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="back" width="512" height="512"/>
+        <image name="next" width="512" height="512"/>
+        <image name="play" width="512" height="512"/>
+    </resources>
 </document>

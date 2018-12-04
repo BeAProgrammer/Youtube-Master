@@ -12,6 +12,8 @@
 		042ED0C921B551ED0098F8CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 042ED0C721B551ED0098F8CF /* Main.storyboard */; };
 		042ED0CB21B551F80098F8CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 042ED0CA21B551F80098F8CF /* Assets.xcassets */; };
 		042ED0CE21B551F80098F8CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 042ED0CC21B551F80098F8CF /* LaunchScreen.storyboard */; };
+		042ED0D621B552330098F8CF /* YouTubePlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042ED0D521B552330098F8CF /* YouTubePlayer.swift */; };
+		042ED0D821B556BF0098F8CF /* YTPlayer.html in Resources */ = {isa = PBXBuildFile; fileRef = 042ED0D721B556BF0098F8CF /* YTPlayer.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		042ED0CA21B551F80098F8CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		042ED0CD21B551F80098F8CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		042ED0CF21B551F80098F8CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		042ED0D521B552330098F8CF /* YouTubePlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YouTubePlayer.swift; sourceTree = "<group>"; };
+		042ED0D721B556BF0098F8CF /* YTPlayer.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = YTPlayer.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,8 @@
 			isa = PBXGroup;
 			children = (
 				042ED0C321B551ED0098F8CF /* AppDelegate.swift */,
+				042ED0D721B556BF0098F8CF /* YTPlayer.html */,
+				042ED0D521B552330098F8CF /* YouTubePlayer.swift */,
 				042ED0C521B551ED0098F8CF /* ViewController.swift */,
 				042ED0C721B551ED0098F8CF /* Main.storyboard */,
 				042ED0CA21B551F80098F8CF /* Assets.xcassets */,
@@ -124,6 +130,7 @@
 			files = (
 				042ED0CE21B551F80098F8CF /* LaunchScreen.storyboard in Resources */,
 				042ED0CB21B551F80098F8CF /* Assets.xcassets in Resources */,
+				042ED0D821B556BF0098F8CF /* YTPlayer.html in Resources */,
 				042ED0C921B551ED0098F8CF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,6 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				042ED0D621B552330098F8CF /* YouTubePlayer.swift in Sources */,
 				042ED0C621B551ED0098F8CF /* ViewController.swift in Sources */,
 				042ED0C421B551ED0098F8CF /* AppDelegate.swift in Sources */,
 			);
